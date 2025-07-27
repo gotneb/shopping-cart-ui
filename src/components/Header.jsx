@@ -5,7 +5,8 @@ import { useState } from "react";
 const Header = () => {
   const [showDropDown, setShowDropDown] = useState(false);
 
-  const { cart } = useCart();
+  const { cart, removeFromCart, clearCart } = useCart();
+
   const itemCount = cart.reduce((acc, item) => acc + item.qty, 0);
   const totalPrice = cart
     .reduce((acc, item) => acc + item.price * item.qty, 0)
@@ -29,7 +30,7 @@ const Header = () => {
         </button>
 
         {showDropDown && (
-          // The parent is relative. So it arranges this div relative to its parent. 
+          // The parent is relative. So it arranges this div relative to its parent.
           <div className="absolute right-0 mt-2 w-80 bg-white border rounded shadow-lg z-50">
             <div className="p-4">
               <h2 className="font-semibold text-lg mb-2">Cart Items</h2>
@@ -49,6 +50,13 @@ const Header = () => {
                             {product.qty} x R${product.price}
                           </p>
                         </div>
+
+                        <button
+                          onClick={() => removeFromCart(product.id)}
+                          className="text-sm text-red-500 hover:underline cursor-pointer"
+                        >
+                          Remove
+                        </button>
                       </li>
                     ))}
                   </ul>
@@ -57,6 +65,13 @@ const Header = () => {
                     <span>Total:</span>
                     <span>R${totalPrice}</span>
                   </div>
+
+                  <button
+                    onClick={clearCart}
+                    className="cursor-pointer mt-3 w-full text-white py-1 rounded bg-red-500 transition hover:bg-red-600"
+                  >
+                    Clear Cart
+                  </button>
                 </>
               )}
             </div>
