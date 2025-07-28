@@ -59,6 +59,36 @@
       "category": "Adapters",
       "rating": 4.1,
       "image": "images/product-6.png"
+    },
+    {
+      "id": 7,
+      "name": "Dell Inspiron Touchscreen Laptop, 15.6\" ",
+      "description": "【Processor】Intel Quad-Core i5-1155G7 4 cores, 8 threads.",
+      "price": 532.99,
+      "quantity": 100,
+      "category": "Laptops",
+      "rating": 4.2,
+      "image": "images/product-7.png"
+    },
+    {
+      "id": 8,
+      "name": "Laptop Dell Ultra Touchscreen Laptop 15.6\"",
+      "description": "【Powerful Processor】MINISFORUM M1 Pro Mini PC is powered by the Intel Core Ultra 5 125H processor.",
+      "price": 719.99,
+      "quantity": 100,
+      "category": "Computers",
+      "rating": 4.5,
+      "image": "images/product-8.png"
+    },
+    {
+      "id": 9,
+      "name": "PlayStation®5 console (slim)",
+      "description": "Includes DualSense Wireless Controller, 1TB SSD, Disc Drive.",
+      "price": 489.99,
+      "quantity": 100,
+      "category": "Playstation",
+      "rating": 4.7,
+      "image": "images/product-9.png"
     }
   ]
 }
